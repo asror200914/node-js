@@ -31,6 +31,7 @@ mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB ulandi'))
     .catch(err => console.error('MongoDB xato:', err));
 
-app.listen(3000, () => {
-    console.log('server ulandi')
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server port ${PORT} da ishlayapti`);
+});
