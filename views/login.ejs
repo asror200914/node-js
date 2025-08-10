@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login sahifasi</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+
+    <% if (message) { %>
+        <p style="color: red;">
+            <%= message %>
+        </p>
+        <% } %>
+
+            <form action="/api/auth/login" method="post">
+                <div>
+                    <label>Username:</label>
+                    <input type="text" name="email" />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password" />
+                </div>
+                <button type="submit">Kirish</button>
+            </form>
+</body>
+
+</html>
